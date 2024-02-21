@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" type="text/css" href="Formulario.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Encuesta</h1>
+        <form action="procesar_encuesta.php" method="post">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" value="Pepito Andres" size="20" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="sexo">Sexo:</label>
+            <input type="radio" id="sexo_mujer" name="sexo" value="mujer" checked>
+            <label for="sexo_mujer">Mujer</label>
+            <input type="radio" id="sexo_hombre" name="sexo" value="hombre">
+            <label for="sexo_hombre">Hombre</label>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+
+            <label for="profesion">Profesión u Oficio:</label>
+            <select id="profesion" name="profesion" required>
+                <option value="" disabled selected>Seleccione una profesión</option>
+                
+                <optgroup label="Profesiones técnicas">
+                    <option value="ingeniero">Ingeniero</option>
+                    <option value="programador">Programador</option>
+                    <option value="técnico">Técnico</option>
+                </optgroup>
+                
+                <optgroup label="Profesiones de salud">
+                    <option value="médico">Médico</option>
+                    <option value="enfermero">Enfermero</option>
+                    <option value="terapeuta">Terapeuta</option>
+                </optgroup>
+                
+                <optgroup label="Profesiones creativas">
+                    <option value="artista">Artista</option>
+                    <option value="diseñador">Diseñador</option>
+                    <option value="escritor">Escritor</option>
+                </optgroup>
+            </select>
+            
+
+            <h2>Preguntas del tema específico:</h2>
+
+            <label>¿Tiene experiencia en el tema?</label>
+            <center>
+            <input type="radio" id="experiencia_si" name="experiencia" value="si">
+            <label for="experiencia_si">Sí</label>
+
+            <input type="radio" id="experiencia_no" name="experiencia" value="no">
+            <label for="experiencia_no">No</label>
+        </center>
+
+
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Resto del código -->
+
+</body>
+</html>
